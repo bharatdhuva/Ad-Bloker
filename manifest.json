@@ -1,15 +1,16 @@
 {
   "manifest_version": 3,
   "name": "ShieldBlock — Ad Blocker",
-  "version": "2.0.0",
-  "description": "A powerful, privacy-first ad blocker that eliminates ads, trackers, popups, redirects, and YouTube ads without affecting website content.",
+  "version": "3.0.0",
+  "description": "Industry-level ad blocker with deep script interception, YouTube ad removal, and universal protection.",
   "permissions": [
     "declarativeNetRequest",
     "declarativeNetRequestFeedback",
     "storage",
     "activeTab",
     "tabs",
-    "webNavigation"
+    "webNavigation",
+    "scripting"
   ],
   "host_permissions": [
     "<all_urls>"
@@ -21,9 +22,16 @@
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
-      "js": ["content/content-script.js", "content/anti-redirect.js"],
+      "js": ["content/content-script.js"],
       "css": ["content/cosmetic-filters.css"],
       "run_at": "document_start",
+      "all_frames": true,
+      "world": "MAIN"
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content/element-hider.js"],
+      "run_at": "document_idle",
       "all_frames": true
     },
     {
@@ -36,7 +44,8 @@
       ],
       "js": ["content/youtube-blocker.js"],
       "run_at": "document_start",
-      "all_frames": true
+      "all_frames": true,
+      "world": "MAIN"
     }
   ],
   "action": {
