@@ -1,0 +1,65 @@
+/* ShieldBlock — Cosmetic Filter Stylesheet */
+
+/* Hide known ad containers */
+[data-shieldblock-hidden="true"] {
+  display: none !important;
+  visibility: hidden !important;
+  height: 0 !important;
+  min-height: 0 !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  position: absolute !important;
+  z-index: -9999 !important;
+}
+
+/* Google Ads */
+ins.adsbygoogle {
+  display: none !important;
+  height: 0 !important;
+}
+
+div[id^="google_ads_iframe"] {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* GPT ad slots */
+div[id^="div-gpt-ad"] {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* Taboola */
+div[id*="taboola"],
+div[class*="taboola"],
+#taboola-below-article-thumbnails {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* Outbrain */
+div.OUTBRAIN,
+div[id*="outbrain"],
+div[class*="outbrain"] {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* Generic ad patterns */
+[aria-label="advertisement"],
+[aria-label="Advertisement"],
+[aria-label="Sponsored"] {
+  display: none !important;
+  height: 0 !important;
+}
+
+/* Collapse empty ad spaces to prevent layout gaps */
+div[class*="ad-container"]:empty,
+div[class*="ad-wrapper"]:empty,
+div[class*="ad-slot"]:empty {
+  display: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}

@@ -1,0 +1,17 @@
+[
+  {"id":2001,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||optinmonster.com","resourceTypes":["script","sub_frame","stylesheet"]}},
+  {"id":2002,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||sumo.com/sumo.js","resourceTypes":["script"]}},
+  {"id":2003,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||mailmunch.co","resourceTypes":["script","sub_frame"]}},
+  {"id":2004,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||privy.com","resourceTypes":["script","sub_frame"]}},
+  {"id":2005,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||wisepops.com","resourceTypes":["script","sub_frame"]}},
+  {"id":2006,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||onesignal.com/sdks","resourceTypes":["script"]}},
+  {"id":2007,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||pushcrew.com","resourceTypes":["script"]}},
+  {"id":2008,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||subscribers.com","resourceTypes":["script","sub_frame"]}},
+  {"id":2009,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||pushwoosh.com","resourceTypes":["script"]}},
+  {"id":2010,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||cookiebot.com","resourceTypes":["script","sub_frame"]}},
+  {"id":2011,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||consensu.org","resourceTypes":["script","sub_frame"]}},
+  {"id":2012,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||trustarc.com","resourceTypes":["script","sub_frame"]}},
+  {"id":2013,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||evidon.com","resourceTypes":["script","sub_frame"]}},
+  {"id":2014,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||livechatinc.com/tracking","resourceTypes":["script","image"]}},
+  {"id":2015,"priority":1,"action":{"type":"block"},"condition":{"urlFilter":"||tidiochat.com","resourceTypes":["script","sub_frame"]}}
+]

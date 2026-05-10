@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShieldBlock</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup-container">
+    <!-- Header -->
+    <header class="popup-header">
+      <div class="logo-row">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 7V12C3 17.25 6.75 22.13 12 23C17.25 22.13 21 17.25 21 12V7L12 2Z" 
+                  fill="url(#shieldGrad)" stroke="none"/>
+            <path d="M9 12L11 14L15 10" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="shieldGrad" x1="3" y1="2" x2="21" y2="23">
+                <stop offset="0%" stop-color="#6C5CE7"/>
+                <stop offset="100%" stop-color="#a29bfe"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <h1>ShieldBlock</h1>
+          <span class="version">v1.0.0</span>
+        </div>
+      </div>
+      <p class="tagline">Your privacy shield is <span id="status-text" class="status-active">active</span></p>
+    </header>
+
+    <!-- Main Toggle -->
+    <div class="toggle-section">
+      <div class="toggle-info">
+        <span class="toggle-label">Protection</span>
+        <span id="toggle-state" class="toggle-state on">Enabled</span>
+      </div>
+      <label class="toggle-switch" id="main-toggle">
+        <input type="checkbox" id="toggle-input" checked>
+        <span class="toggle-slider"></span>
+      </label>
+    </div>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon ads-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>
+          </div>
+        <div class="stat-info">
+          <span class="stat-value" id="total-blocked">0</span>
+          <span class="stat-label">Total Blocked</span>
+        </div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon site-icon">
+          <svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M4.083 9h1.946c.089-1.546.383-2.97.837-4.118A6.004 6.004 0 004.083 9zM10 2a8 8 0 100 16 8 8 0 000-16zm0 2c-.076 0-.232.032-.465.262-.238.234-.497.623-.737 1.182-.389.907-.673 2.142-.766 3.556h3.936c-.093-1.414-.377-2.649-.766-3.556-.24-.56-.5-.948-.737-1.182C10.232 4.032 10.076 4 10 4zm3.971 5c-.089-1.546-.383-2.97-.837-4.118A6.004 6.004 0 0115.917 9h-1.946zm-2.003 2H8.032c.093 1.414.377 2.649.766 3.556.24.56.5.948.737 1.182.233.23.389.262.465.262.076 0 .232-.032.465-.262.238-.234.497-.623.737-1.182.389-.907.673-2.142.766-3.556zm1.166 4.118c.454-1.147.748-2.572.837-4.118h1.946a6.004 6.004 0 01-2.783 4.118zm-6.268 0C6.412 13.97 6.118 12.546 6.03 11H4.083a6.004 6.004 0 002.783 4.118z" clip-rule="evenodd"/></svg>
+        </div>
+        <div class="stat-info">
+          <span class="stat-value" id="site-blocked">0</span>
+          <span class="stat-label">This Site</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Current Site Section -->
+    <div class="site-section">
+      <div class="site-info">
+        <div class="site-favicon" id="site-favicon">🌐</div>
+        <div class="site-details">
+          <span class="site-hostname" id="site-hostname">—</span>
+          <span class="site-status" id="site-status">Loading...</span>
+        </div>
+      </div>
+      <button class="btn-whitelist" id="whitelist-btn" title="Toggle whitelist">
+        <svg viewBox="0 0 20 20" fill="currentColor" class="whitelist-icon"><path d="M10 2a8 8 0 100 16 8 8 0 000-16zm3.707 5.293a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0l-2-2a1 1 0 111.414-1.414L9 10.586l3.293-3.293a1 1 0 011.414 0z"/></svg>
+        <span id="whitelist-text">Whitelist</span>
+      </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="popup-footer">
+      <button class="btn-reset" id="reset-btn">Reset Stats</button>
+      <span class="footer-credit">Privacy-first protection</span>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
